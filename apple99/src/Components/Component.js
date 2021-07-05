@@ -2,6 +2,7 @@ import React from 'react';
 import './Component.css';
 import Comp0 from './Com_0';
 import Comp1 from './Com_1';
+import Comp2 from './Com_2';
 import Buttons from './Buttons';
 
 class Component extends React.Component{
@@ -24,6 +25,9 @@ class Component extends React.Component{
         }
         else if(num === 1){
             returncomp = <Comp1></Comp1>;
+        }
+        else if(num === 2){
+            returncomp = <Comp2></Comp2>;
         }
         return returncomp;
     }

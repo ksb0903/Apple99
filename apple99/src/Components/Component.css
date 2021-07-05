@@ -1,45 +1,18 @@
+/*버튼 + 컴포넌트*/
 #component_div{
     display: grid;
-    grid-template-columns: 1fr 4.3fr;
+    grid-template-columns: 1fr 4.3fr 0.7fr;
     margin: 0 auto 0 auto;
     text-align: center;
     width: 100%;
     height: 600px;
 }
-
+/*컴포넌트 출력 부분*/
 #component{
-    padding-top:150px;
+    padding-top:100px;
 }
 
-#com1_div{
-    text-align: center;
-}
-
-#com1_output{
-    margin: 0 auto 0 auto;
-    width: 700px
-}
-
-#com1_output h3{
-    text-align: left;
-}
-
-#dropzone{
-    background-color: white;
-    width: 700px;
-    height: 100px;
-    margin: 0 auto 0 auto;
-}
-
-#dropzone h2{
-    padding: 35px;
-}
-
-#image{
-    width:300px;
-    height: 300px;
-}
-
+/*버튼*/
 #buttons{
     border-right: 2px solid black;
     padding-top: 20px;
@@ -54,3 +27,65 @@
     border: 0px solid black;
 }
 
+/*컴포넌트 1*/
+/*당도 측정 결과 출력*/
+#com1_output{
+    margin: 0 auto 0 auto;
+    width: 700px
+}
+
+#com1_output h3{
+    text-align: left;
+}
+/*드롭존*/
+#dropzone{
+    background-color: white;
+    width: 700px;
+    height: 100px;
+    margin: 0 auto 0 auto;
+}
+
+#dropzone h2{
+    padding: 35px;
+}
+/*이미지*/
+#image{
+    width: 300px;
+    height: 300px;
+}
+
+/*컴포넌트 2*/
+#showdatadiv{
+   display: block;
+   width: 300px;
+   height: fit-content;
+   margin: 0 auto 0 auto;
+}
+
+.showdata{
+    border: 1px solid black;
+    width: 300px;
+    height: fit-content;
+    margin: 5px auto 0px auto;
+    background-color: white;
+    padding: 0;
+}
+
+.showdata h1{
+    margin: 0;
+}
+
+.detaildata{
+    border: 0px;
+    width: 0px;
+    height: 0px;
+    margin: 0 auto 5px auto;
+    background-color: rgb(34, 202, 90);
+    padding: 0;
+    color: whitesmoke;
+    text-align: left;
+}
+
+.detaildata h2{
+    margin-left: 10px;
+}

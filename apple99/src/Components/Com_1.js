@@ -30,11 +30,6 @@ class Com_1 extends React.Component{
                 formData, config
             );
             
-            const data2 = await axios.get(
-                "/report?id=admin"
-            );
-            console.log(data);
-            console.log(data2);
             this.setState({gettedbrix:data.data.report.brix});
         }catch(e){
             console.log("error");
