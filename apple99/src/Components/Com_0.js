@@ -4,7 +4,7 @@ import React from 'react';
 class Com_0 extends React.Component{
     render(){
         return(
-            <div id = "com_0">
+            <div id = "com0_div">
                 <h2>Welcome to Apple99</h2>
                 <h4>사과 당도 측정 시스템입니다.</h4>
             </div>

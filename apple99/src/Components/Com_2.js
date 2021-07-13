@@ -9,8 +9,7 @@ class Com_2 extends React.Component{
         super(props);
 
         this.state={
-            data_array: [],
-            clicked: false
+            data_array: []
         }
     }
 
@@ -25,7 +24,8 @@ class Com_2 extends React.Component{
         this.getbrixs()
     }
 
-    getDetail(index){
+    getDetail(index, e){
+        e.preventDefault()
         let gettedid = document.getElementsByClassName("detaildata")[index]
         gettedid.style.width = "300px"
         gettedid.style.height = "fit-content"
@@ -33,7 +33,8 @@ class Com_2 extends React.Component{
         gettedid.style.border = "1px solid black"
     }
 
-    hideDetail(index){
+    hideDetail(index, e){
+        e.preventDefault()
         let gettedid = document.getElementsByClassName("detaildata")[index]
         gettedid.style.width = "0px"
         gettedid.style.height = "0px"
@@ -51,7 +52,7 @@ class Com_2 extends React.Component{
 
     render(){
         return(
-            <div id="com_2">
+            <div id="com2_div">
             {
                 this.state.data_array.map((data, index)=>(
                     <div key={index} id="showdatadiv">

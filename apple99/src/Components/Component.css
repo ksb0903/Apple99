@@ -7,15 +7,16 @@
     width: 100%;
     height: 600px;
 }
-/*컴포넌트 출력 부분*/
-#component{
-    padding-top:100px;
+
+#com0_div{
+    padding-top: 100px;
 }
 
 /*버튼*/
 #buttons{
     border-right: 2px solid black;
     padding-top: 20px;
+    height: 100%;
 }
 
 #buttons button{
@@ -28,6 +29,10 @@
 }
 
 /*컴포넌트 1*/
+#com1_div{
+    padding-top:100px;
+}
+
 /*당도 측정 결과 출력*/
 #com1_output{
     margin: 0 auto 0 auto;
@@ -55,6 +60,10 @@
 }
 
 /*컴포넌트 2*/
+#com2_div{
+    padding-top: 50px;
+}
+
 #showdatadiv{
    display: block;
    width: 300px;
@@ -88,4 +97,15 @@
 
 .detaildata h2{
     margin-left: 10px;
+}
+
+/*컴포넌트 3*/
+
+#com3_div{
+    text-align: left;
+    margin-left: 80px;
+}
+
+#com3_div h2{
+    color: rgb(45, 0, 168);
 }

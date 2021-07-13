@@ -3,6 +3,7 @@ import './Component.css';
 import Comp0 from './Com_0';
 import Comp1 from './Com_1';
 import Comp2 from './Com_2';
+import Comp3 from './Com_3';
 import Buttons from './Buttons';
 
 class Component extends React.Component{
@@ -10,26 +11,27 @@ class Component extends React.Component{
         super(props);
 
         this.state = {
-            com_num: 0
+            component_number: 0
         }
     }
 
     changeComponent(num){
-        this.setState({com_num:num})
+        this.setState({component_number:num})
     }
 
     getComponent(num){
-        var returncomp;
         if(num === 0){
-            returncomp = <Comp0></Comp0>;
+            return <Comp0></Comp0>;
         }
         else if(num === 1){
-            returncomp = <Comp1></Comp1>;
+            return <Comp1></Comp1>;
         }
         else if(num === 2){
-            returncomp = <Comp2></Comp2>;
+            return <Comp2></Comp2>;
+        } 
+        else if(num === 3){
+            return <Comp3></Comp3>;
         }
-        return returncomp;
     }
 
     render(){
@@ -37,7 +39,7 @@ class Component extends React.Component{
             <div id = "component_div">
                 <Buttons changeComponent = {this.changeComponent.bind(this)}></Buttons>
                 <div id = "component">
-                    {this.getComponent(this.state.com_num)}
+                    {this.getComponent(this.state.component_number)}
                 </div>
             </div>
         );

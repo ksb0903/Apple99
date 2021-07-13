@@ -10,7 +10,7 @@ class Com_1 extends React.Component{
 
         this.state = {
             path: "",
-            isimg:false,
+            isimg: false,
             gettedbrix: ""
         }
     }
