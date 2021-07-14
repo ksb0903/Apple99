@@ -33,13 +33,13 @@ class Buttons extends React.Component{
                         날씨 정보
                     </button>
 
-                    {/*<button onClick={function(e){
+                    <button onClick={function(e){
                         e.preventDefault();
                         this.Changenum(4);
                     }.bind(this)
                     }>
                         시장 정보
-                </button>*/}
+                </button>
                 </div>
         );
     }

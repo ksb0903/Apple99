@@ -4,6 +4,7 @@ import Comp0 from './Com_0';
 import Comp1 from './Com_1';
 import Comp2 from './Com_2';
 import Comp3 from './Com_3';
+import Comp4 from './Com_4';
 import Buttons from './Buttons';
 
 class Component extends React.Component{
@@ -21,16 +22,19 @@ class Component extends React.Component{
 
     getComponent(num){
         if(num === 0){
-            return <Comp0></Comp0>;
+            return <Comp0></Comp0>
         }
         else if(num === 1){
-            return <Comp1></Comp1>;
+            return <Comp1></Comp1>
         }
         else if(num === 2){
-            return <Comp2></Comp2>;
+            return <Comp2></Comp2>
         } 
         else if(num === 3){
-            return <Comp3></Comp3>;
+            return <Comp3></Comp3>
+        }
+        else if(num === 4){
+            return <Comp4></Comp4>
         }
     }
 

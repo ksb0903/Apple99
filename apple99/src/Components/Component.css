@@ -100,7 +100,6 @@
 }
 
 /*컴포넌트 3*/
-
 #com3_div{
     text-align: left;
     margin-left: 80px;
@@ -108,4 +107,9 @@
 
 #com3_div h2{
     color: rgb(45, 0, 168);
+}
+
+/*컴포넌트 4*/
+#com4_div{
+    padding-top: 100px;
 }
