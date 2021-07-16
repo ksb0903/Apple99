@@ -75,13 +75,15 @@ class Com_3 extends React.Component{
                 
                 <div id = "todayWeather_div">
                     <h2>오늘 날씨</h2>
+                    <div id = "todayWeather">
                     {
                         this.state.todayWeather.map((today)=>(
-                            <div key={today.Hour}>
-                                <h3>{today.Hour}시 &nbsp;&nbsp; {this.getWeekWeatherSVG(today.Category)}  &nbsp; {parseFloat(today.Temp).toFixed(2)}℃</h3>
-                            </div>
-                        ))
+                        <div key={today.Hour}>
+                            <h3>{today.Hour}시 &nbsp; {this.getWeekWeatherSVG(today.Category)}{parseFloat(today.Temp).toFixed(2)}℃</h3>
+                        </div>
+                    ))
                     }
+                    </div>
 
                 </div>
 

@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 //메인화면
 class Com_0 extends React.Component{
     render(){

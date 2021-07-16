@@ -1,13 +1,14 @@
 import React from 'react';
 import './App.css';
+import './Component.css';
 import Header from './Header';
-import Component from './Components/Component';
+import Router from './Router';
 
 function App() {
   return (
     <div>
       <Header></Header>
-      <Component></Component>
+      <Router></Router>
     </div>
   );
 }

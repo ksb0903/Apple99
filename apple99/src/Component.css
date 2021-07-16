@@ -107,6 +107,12 @@
 
 #com3_div h2{
     color: rgb(45, 0, 168);
+    margin-bottom: 0;
+}
+
+#todayWeather{
+    display: flex;
+    width: 680px;
 }
 
 /*컴포넌트 4*/
