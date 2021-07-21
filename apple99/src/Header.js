@@ -3,6 +3,7 @@ import './Header.css';
 import {ReactComponent as Logo} from './빨간 로고.svg';
 
 class Header extends React.Component{
+
     render(){
         return(
             <div id = "header_div">
