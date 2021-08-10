@@ -9,7 +9,7 @@ class Header extends React.Component{
             <div id = "header_div">
                 <div id = "header_wrapper">
                     <Logo className="header_content" id="logo"></Logo>
-                    <h1 className="header_content"><a href="http://localhost:3000">사과 쪼는 멧비둘기</a></h1>
+                    <h1 className="header_content"><a href="http://172.30.1.38:3000">사과 쪼는 멧비둘기</a></h1>
                 </div>
             </div>
         );

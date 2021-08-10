@@ -1,11 +1,11 @@
 import React from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
-import Com_0 from './Components/Com_0'
-import Com_1 from './Components/Com_1'
-import Com_2 from './Components/Com_2'
-import Com_3 from './Components/Com_3'
-import Com_4 from './Components/Com_4'
-import ComX from './Components/ComX'
+import axios from 'axios';
+import Com0 from './Components/Com_0'
+import Com1 from './Components/Com_1'
+import Com2 from './Components/Com_2'
+import Com3 from './Components/Com_3'
+import Com4 from './Components/Com_4'
 import Login from './Components/Login'
 import Signup from './Components/Signup'
 import Buttons from './Components/Buttons'
@@ -15,28 +15,58 @@ class Router extends React.Component {
         super(props);
 
         this.state = {
-            is_logined: false,
-            id: ""
+            is_logined: false
+        }
+    }
+
+    componentDidMount(){
+        if(window.localStorage.getItem("AC_KEY") == null){
+            this.setState({is_logined: false})
+        }
+        else{
+            this.setState({is_logined: true})
         }
     }
 
     logout() {
         this.setState({ is_logined: false })
-        this.setState({ id: "" })
+        window.localStorage.clear()
+    }
+
+    login = async(id, pw)=>{
+        const config = {
+            headers: {"content-type": "application.json", "Authorization": "Bearer FirstLogin"}
+        }
+        
+        var loginData = {
+            id: id,
+            password: pw
+        }
+        
+        try{
+            const jwt = await axios.post(
+                "/signin", loginData, config
+            )
+            window.localStorage.setItem("AC_KEY", jwt.data.key.ACCESSKEY)
+            window.localStorage.setItem("RF_KEY", jwt.data.key.REFRESHKEY)
+            this.setState({is_logined:true})
+            window.history.back()
+        }catch(error){
+            alert("로그인 실패")
+        }
     }
 
     render() {
         return (
             <div id="component_div">
                 <BrowserRouter>
-                    <Buttons is_logined={this.state.is_logined} logout={this.logout.bind(this)}></Buttons>
-                    <Route path="/" component={Com_0} exact />
-                    <Route path="/Com1" component={Com_1} />
-                    <Route path="/Com2" component={Com_2} />
-                    <Route path="/Com3" component={Com_3} />
-                    <Route path="/Com4" component={Com_4} />
-                    <Route path="/ComX" component={ComX} />
-                    <Route path="/Login" component={Login}/>
+                    <Buttons is_logined={this.state.is_logined} logout={this.logout.bind(this)}/>
+                    <Route path="/" component={Com0} exact />
+                    <Route path="/Com1" render={()=><Com1 is_logined={this.state.is_logined}/>} />
+                    <Route path="/Com2" render={()=><Com2 is_logined={this.state.is_logined}/>}/>
+                    <Route path="/Com3" render={()=><Com3 is_logined={this.state.is_logined}/>}/>
+                    <Route path="/Com4" render={()=><Com4 is_logined={this.state.is_logined}/>}/>
+                    <Route path="/Login" render={()=><Login login={this.login.bind(this)}/>}/>
                     <Route path="/Signup" component={Signup}/>
                 </BrowserRouter>
             </div>

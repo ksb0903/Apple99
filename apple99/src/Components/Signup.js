@@ -4,16 +4,20 @@ class Signup extends React.Component{
     render(){
         return(
             <div id="signup_div">
+                <h2>회원가입</h2>
                 <div className="input_div">
-                    <h3>아이디:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h3><input type="text" className="input" />
+                    <div className="text_div"><h3>아이디:</h3></div>
+                    <div className="box_div"><input type="text" className="input" /></div>
                 </div>
                 <div className="input_div">
-                    <h3>비밀번호:&nbsp;&nbsp;&nbsp;&nbsp;</h3><input type="password" className="input" />
+                    <div className="text_div"><h3>비밀번호:</h3></div>
+                    <div className="box_div"><input type="password" className="input" /></div>
                 </div>
                 <div className="input_div">
-                    <h4>비밀번호 확인:&nbsp;</h4><input type="password" className="input" />
+                    <div className="text_div"><h3>비밀번호 확인:</h3></div>
+                    <div className="box_div"><input type="password" className="input" /></div>
                 </div>
-                <div id="login_button_div">
+                <div className="login_button_div">
                     <button className="login_button">회원가입</button>
                 </div>
             </div>

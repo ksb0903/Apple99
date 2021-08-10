@@ -1,7 +1,12 @@
+.nologinpage{
+    margin: 0 auto 0 auto;
+    padding-top: 50px;
+}
+
 /*버튼 + 컴포넌트*/
 #component_div{
     display: grid;
-    grid-template-columns: 1fr 4.3fr 0.7fr;
+    grid-template-columns: 0.8fr 4.3fr 0.7fr;
     margin: 0 auto 0 auto;
     text-align: center;
     width: 100%;
@@ -11,15 +16,25 @@
 #com0_div{
     padding-top: 100px;
 }
+
+#com0_div h2{
+    font-size: 30px;
+}
+
+#com0_div h4{
+    font-size: 22px;
+}
 /*로그인 버튼*/
 #login_zone{
     width: 100%;
-    height: 90px;
-    border-right: 2px solid black;
+    height: 110px;
+    border-right: 1.5px solid black;
+    border-bottom: 1.5px solid black;
 }
 
 .loginzone_button{
-    margin-top:40px;
+    margin-top:30px;
+    margin-bottom: 30px;
     width: 150px;
     height: 50px;
     font-size: 15pt;
@@ -28,7 +43,7 @@
 
 /*버튼*/
 #buttons{
-    border-right: 2px solid black;
+    border-right: 1.5px solid black;
     padding-top: 20px;
     height: 100%;
 }
@@ -36,10 +51,13 @@
 #buttons button{
     width: 100%;
     height: 70px;
-    color:rgb(2, 0, 1);
     font-size: 20pt;
-    background-color: rgba(221, 166, 226, 0.753);
+    background-color: white;
     border: 0px solid black;
+}
+
+#buttons button:hover{
+    background-color: rgba(241, 169, 194, 0.753);
 }
 
 /*컴포넌트 1*/
@@ -58,13 +76,15 @@
 }
 /*드롭존*/
 #dropzone{
-    background-color: white;
     width: 700px;
     height: 100px;
     margin: 0 auto 0 auto;
+    border: 1px solid black;
+    cursor: pointer;
 }
 
 #dropzone h2{
+    margin: 0 auto 0 auto;
     padding: 35px;
 }
 /*이미지*/
@@ -105,7 +125,7 @@
     margin: 0 auto 5px auto;
     background-color: rgb(34, 202, 90);
     padding: 0;
-    color: whitesmoke;
+    color: white;
     text-align: left;
 }
 
@@ -129,6 +149,12 @@
     width: 680px;
 }
 
+.weather_div{
+    border: 1px solid black;
+    margin-bottom: 10px;
+    padding-left: 5px;
+}
+
 /*컴포넌트 4*/
 #com4_div{
     padding-top: 100px;
@@ -144,18 +170,25 @@
     margin: 100px auto 0 auto;
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
-    width: fit-content;
-    height: 100px;
+    width: 500px;
+    height: 300px;
+    background-color: white;
+    border: 1px solid black;
 }
 
 .input_div{
     display:flex;
+    margin: 0 auto 0 auto;
 }
 
 .input{
     margin-top: 17px;
     width: 200px;
     height: 30px;
+}
+
+.login_button_div{
+    margin-bottom: 20px;
 }
 
 .login_button{
@@ -165,11 +198,21 @@
     margin: 2px 5px 0px 5px;
 }
 
+.text_div{
+    width: 130px;
+}
+
+.box_div{
+    width: 200px;
+}
+
 /*회원가입 화면*/
 #signup_div{
     margin: 100px auto 0 auto;
     display: grid;
     grid-template-rows: 1fr 1fr 1fr 1fr;
-    width: fit-content;
-    height: 100px;
+    width: 500px;
+    height: fit-content;
+    background-color: white;
+    border: 1px solid black;
 }
