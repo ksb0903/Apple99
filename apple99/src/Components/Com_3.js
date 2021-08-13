@@ -20,7 +20,7 @@ class Com_3 extends React.Component {
 
     getNowWeather = async () => {
         const config = {
-            headers: {"Authorization": `Bearer ${window.localStorage.getItem("RF_KEY")}`}
+            headers: {"Authorization": `Bearer ${window.sessionStorage.getItem("RF_KEY")}`}
         }
         
         const nowWeather = await axios.get(
@@ -32,7 +32,7 @@ class Com_3 extends React.Component {
 
     getWeekWeather = async () => {
         const config = {
-            headers: {"Authorization": `Bearer ${window.localStorage.getItem("RF_KEY")}`}
+            headers: {"Authorization": `Bearer ${window.sessionStorage.getItem("RF_KEY")}`}
         }
 
         const weekWeather = await axios.get(
@@ -73,7 +73,7 @@ class Com_3 extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="components">
                 {
                     this.props.is_logined ?
                         <div id="com3_div">
@@ -81,7 +81,7 @@ class Com_3 extends React.Component {
                             <div className="weather_div">
                                 <h2>현재 날씨</h2>
                                 <h3>{this.state.currentWeather.Date} &nbsp; {this.state.currentWeather.DayOfWeek} &nbsp; {this.getNowWeatherSVG(this.state.currentWeather.Category)}</h3>
-                                <h3>기온: {this.state.currentWeather.Temp} &nbsp; 강수 확률: {this.state.nowWeather.rainPercent}</h3>
+                                <h3>기온: {this.state.currentWeather.Temp}℃ &nbsp; 강수 확률: {this.state.nowWeather.rainPercent}</h3>
                             </div>
 
                             <div className="weather_div">

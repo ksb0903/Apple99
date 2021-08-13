@@ -20,7 +20,7 @@ class Router extends React.Component {
     }
 
     componentDidMount(){
-        if(window.localStorage.getItem("AC_KEY") == null){
+        if(window.sessionStorage.getItem("AC_KEY") == null){
             this.setState({is_logined: false})
         }
         else{
@@ -28,9 +28,13 @@ class Router extends React.Component {
         }
     }
 
+    componentWillUnmount(){
+        window.sessionStorage.clear()
+    }
+
     logout() {
         this.setState({ is_logined: false })
-        window.localStorage.clear()
+        window.sessionStorage.clear()
     }
 
     login = async(id, pw)=>{
@@ -47,8 +51,9 @@ class Router extends React.Component {
             const jwt = await axios.post(
                 "/signin", loginData, config
             )
-            window.localStorage.setItem("AC_KEY", jwt.data.key.ACCESSKEY)
-            window.localStorage.setItem("RF_KEY", jwt.data.key.REFRESHKEY)
+            window.sessionStorage.setItem("AC_KEY", jwt.data.key.ACCESSKEY)
+            window.sessionStorage.setItem("RF_KEY", jwt.data.key.REFRESHKEY)
+            window.sessionStorage.setItem("ID", id)
             this.setState({is_logined:true})
             window.history.back()
         }catch(error){

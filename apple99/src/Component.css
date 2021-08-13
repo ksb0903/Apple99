@@ -1,16 +1,36 @@
+body{
+    background-color: hsl(213, 100%, 94%);
+}
+
 .nologinpage{
     margin: 0 auto 0 auto;
-    padding-top: 50px;
+    padding-top: 200px;
+}
+
+.components{
+    margin: 0 auto 0 auto;
 }
 
 /*버튼 + 컴포넌트*/
 #component_div{
     display: grid;
-    grid-template-columns: 0.8fr 4.3fr 0.7fr;
+    grid-template-columns: 0.8fr 4.0fr 0.3fr;
     margin: 0 auto 0 auto;
     text-align: center;
-    width: 100%;
-    height: 600px;
+    width: 80%;
+    height: 1000px;
+    border-right: 1.5px solid black;
+    border-left: 1.5px solid black;
+    border-bottom: 1.5px solid black;
+    background-color: white;
+}
+
+#menubar{
+    background-color: white;
+    height: 100%;
+    border-right: 1.5px solid black;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 #com0_div{
@@ -28,24 +48,19 @@
 #login_zone{
     width: 100%;
     height: 110px;
-    border-right: 1.5px solid black;
-    border-bottom: 1.5px solid black;
 }
 
 .loginzone_button{
-    margin-top:30px;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     width: 150px;
     height: 50px;
     font-size: 15pt;
 }
 
-
 /*버튼*/
 #buttons{
-    border-right: 1.5px solid black;
-    padding-top: 20px;
-    height: 100%;
+    padding-top: 15px;
+    height: fit-content;
 }
 
 #buttons button{
@@ -96,13 +111,16 @@
 /*컴포넌트 2*/
 #com2_div{
     padding-top: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0 auto 0 auto;
 }
 
 #showdatadiv{
    display: block;
    width: 300px;
    height: fit-content;
-   margin: 0 auto 0 auto;
+   margin: 0 5px 0 5px;
 }
 
 .showdata{
@@ -119,14 +137,15 @@
 }
 
 .detaildata{
-    border: 0px;
-    width: 0px;
-    height: 0px;
+    border: 1px solid black;
+    width: 300px;
+    height: fit-content;
     margin: 0 auto 5px auto;
-    background-color: rgb(34, 202, 90);
+    background-color: rgb(217, 248, 133);
     padding: 0;
-    color: white;
+    color: black;
     text-align: left;
+    display: none;
 }
 
 .detaildata h2{
@@ -152,7 +171,7 @@
 .weather_div{
     border: 1px solid black;
     margin-bottom: 10px;
-    padding-left: 5px;
+    padding-left: 15px;
 }
 
 /*컴포넌트 4*/

@@ -15,7 +15,7 @@ class Com_2 extends React.Component {
 
     getbrixs = async () => {
         const config = {
-            headers: {"Authorization": `Bearer ${window.localStorage.getItem("RF_KEY")}`}
+            headers: {"Authorization": `Bearer ${window.sessionStorage.getItem("RF_KEY")}`}
         }
         const data = await axios.get(
             "/report",  config
@@ -30,19 +30,14 @@ class Com_2 extends React.Component {
     getDetail(index, e) {
         e.preventDefault()
         let gettedid = document.getElementsByClassName("detaildata")[index]
-        gettedid.style.width = "300px"
-        gettedid.style.height = "fit-content"
-        gettedid.style.color = "black"
-        gettedid.style.border = "1px solid black"
+        gettedid.style.display = "block"
     }
 
     hideDetail(index, e) {
         e.preventDefault()
         let gettedid = document.getElementsByClassName("detaildata")[index]
-        gettedid.style.width = "0px"
-        gettedid.style.height = "0px"
-        gettedid.style.color = "white"
-        gettedid.style.border = "0px"
+        gettedid.style.display = "none"
+        
     }
 
     getGrade(data) {
@@ -55,7 +50,7 @@ class Com_2 extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="components">
                 {
                     this.props.is_logined ?
                         <div id="com2_div">{

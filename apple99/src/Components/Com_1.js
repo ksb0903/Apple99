@@ -16,6 +16,7 @@ class Com_1 extends React.Component {
     }
 
     sendImage = async (propsimg) => {
+        this.setState({ gettedbrix: "측정 중..."})
         const config = {
             headers: { "content-type": "multipart/form-data" }
         };
@@ -39,7 +40,7 @@ class Com_1 extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="components">
                 {
                     this.props.is_logined ?
                         <div id="com1_div">

@@ -14,7 +14,7 @@ class Com_4 extends React.Component {
 
     getMarket = async () => {
         const config = {
-            headers: {"Authorization": `Bearer ${window.localStorage.getItem("RF_KEY")}`}
+            headers: {"Authorization": `Bearer ${window.sessionStorage.getItem("RF_KEY")}`}
         }
         
         const markets = await axios.get(
@@ -46,7 +46,7 @@ class Com_4 extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="components">
                 {
                     this.props.is_logined ?
                         <div id="com4_div">
